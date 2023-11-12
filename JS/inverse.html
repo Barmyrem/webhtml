@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1 style="text-align: center;">Ecriture en Sens Inverse </h1>
+    <form>
+        <label for="textInput">Enter Your Text:</label>
+        <input type="text" id="textInput">
+        <input type="button" value="Inverser" onclick="reverseText();">
+    </form>
+    <div id="output"></div>
+    <script>
+        function reverseText() {
+            var inputElement = document.getElementById("textInput");
+            var outputElement = document.getElementById("output");
+            var text = inputElement.value;
+            var reversedText = reverseString(text);
+            outputElement.textContent = reversedText;
+        }
+
+        function reverseString(str) {
+            if (str === "") {
+                return str;
+            }
+
+            var storedString = [];
+
+            for (var i = str.length - 1; i >= 0; i--) {
+                storedString.push(str[i]);
+            }
+
+            return storedString.join("");
+        }
+    </script>
+</body>
+</html>

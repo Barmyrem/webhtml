@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Button Example</title>
+</head>
+<body>
+    <label for="select-button">Select an option: </label>
+    <select id="select-button">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+
+   
+</body>
+</html>
+
+
+
+<script>
+    // Add event listener to handle the selection
+    document.getElementById("select-button").addEventListener("change", function() {
+        var selectedOption = this.value;
+        alert("Selected option: " + selectedOption);
+    });
+</script>

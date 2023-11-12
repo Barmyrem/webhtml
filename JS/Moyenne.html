@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1>
+        <center>La Moyenne</center>
+    </h1>
+
+    <p>Veuillez entrer la note de :</p>
+
+    <form>
+        <p>MATH:</p>
+        <input type="text" id="a"><br>
+
+        <p>PHYSICS:</p>
+        <input type="text" id="b"><br>
+
+        <p>SPORT:</p>
+        <input type="text" id="c"><br>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateMoyenne(t) {
+            var a = t[0];
+            var b = t[1];
+            var c = t[2];
+            var sum = a + b + c;
+            return sum / 3;
+        }
+
+        function displayMoyenne() {
+            var t = [];
+            t[0] = parseFloat(document.getElementById('a').value);
+            t[1] = parseFloat(document.getElementById('b').value);
+            t[2] = parseFloat(document.getElementById('c').value);
+            var result = calculateMoyenne(t);
+            document.getElementById('result').innerHTML = "La moyenne est : " + result;
+        }
+    </script>
+
+    <input type="button" value="La moyenne" onclick="displayMoyenne();">
+</body>
+
+</html>
+

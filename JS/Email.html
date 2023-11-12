@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Email</h1>
+    <label style="text-align: center;">Enter Votre Email</label>
+    <input type="text" id="emailInput">
+    <input type="submit"  onclick="var email = document.getElementById('emailInput').value; 
+    var split = email.split('@'); 
+    var first = split[0].slice(0, 1) + split[0].slice(1).replace(/./g, '.'); 
+    alert('Your Email is: ' + first + '@' + split[1]);">
+
+    <p id="email"></p>
+</body>
+</html>

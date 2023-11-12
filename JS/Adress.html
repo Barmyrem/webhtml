@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1 style="text-align: center;"><b>INFORMATIONS</b></h1>
+
+    <h2>Bonjour</h2>
+
+    <form>
+        <p>Entrer Votre Nom:</p>
+        <input type="text" id="nom"><br>
+
+        <p>Entrer Votre Prénom:</p>
+        <input type="text" id="prenom"><br>
+
+        <p>Entrer Votre Adresse:</p>
+        <input type="text" id="adress"><br>
+        
+        <p>Entrer Votre Ville:</p>
+        <input type="text" id="ville"><br>
+    </form>
+
+    <!--a paragraph element to display the address -->
+    <p id="displayedAdress"></p>
+
+    <script>
+        function information(t) {
+            let nom = t[0];
+            let prenom = t[1];
+            let adress = t[2];
+            let ville = t[3];
+            let info = nom + " " + prenom;
+            alert("Bonjour " + info);
+            return info;
+        }
+
+        function displayAdress() {
+            var t = [];
+            t[0] = document.getElementById('nom').value;
+            t[1] = document.getElementById('prenom').value;
+            t[2] = document.getElementById('adress').value;
+            t[3] = document.getElementById('ville').value;
+
+            document.getElementById('displayedAdress').textContent = "Address: " + t[2] + " " + t[3];
+
+            information(t); 
+        }
+    </script>
+  <br><br>
+    <input type="button" value="Click Here" onclick="displayAdress();">
+</body>
+
+</html>

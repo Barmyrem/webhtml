@@ -1,0 +1,144 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Tableau Manipulation</title>
+</head>
+<body>
+    <h1>Tableau Manipulation</h1>
+    <ul id="resultList"></ul>
+    <button onclick="operation1()">Ajouter Safaa à la fin</button>
+    <button onclick="operation2()">Ajouter Sanaa au début</button>
+    <button onclick="operation3()">Ajouter Omar entre Anas et Achraf</button>
+    <button onclick="operation4()">Supprimer Anas</button>
+    <button onclick="operation5()">Ajouter Saad après Ahmed et supprimer Achraf</button>
+    <button onclick="operation6()">Concaténer un nouveau tableau</button>
+    <button onclick="operation7()">Supprimer des éléments du tableau</button>
+
+    <script>
+        let tableau = ["Ahmed", "Anas", "Achraf"];
+        let resultList = document.getElementById("resultList");
+
+        function displayResult(result) {
+            document.write(result + "<br>");
+        }
+
+        function operation1() {
+            tableau.splice(3, 0, "Sara");
+            result1 = tableau.slice();
+        document.write(result1);
+        }
+
+        function operation2() {
+            tableau.splice(0, 0, "Sanaa");
+             result2 = tableau.slice();
+        document.write(result2);
+        }
+
+        function operation3() {
+            tableau.splice(3, 0, "Omar");
+            result3 = tableau.slice();
+        document.write(result3);
+        }
+
+        function operation4() {
+            tableau.splice(2, 1);
+            result4 = tableau.slice();
+        document.write(result4);
+        }
+
+        function operation5() {
+            tableau.splice(2, 0, "Saad");
+            tableau.splice(4, 1);
+           result5 = tableau.slice();
+        document.write(result4);
+        }
+
+        function operation6() {
+            let nvTab = ["Aya", "Maha"];
+            tableau = tableau.concat(nvTab);
+            displayResult(tableau.join(', '));
+        }
+
+        function operation7() {
+            tableau.splice(0, 1);
+            tableau.splice(5, 1);
+            tableau.splice(2, 1);
+            displayResult(tableau.join(', '));
+        }
+    </script>
+</body>
+</html>-->
+<DOCTYPE html>
+</head>
+<body>
+    <h1>Tableau Manipulation</h1>
+    <ul id="resultList"></ul>
+    <button onclick="operation1()">Ajouter Safaa à la fin</button>
+    <br><br>
+    <button onclick="operation2()">Ajouter Sanaa au début</button>
+    <br><br>
+    <button onclick="operation3()">Ajouter Omar entre Anas et Achraf</button>
+    <br><br>
+    <button onclick="operation4()">Supprimer Anas</button>
+    <br><br>
+    <button onclick="operation5()">Ajouter Saad après Ahmed et supprimer Achraf</button>
+    <br><br>
+    <button onclick="operation6()">Concaténer un nouveau tableau</button>
+    <br><br>
+    <button onclick="operation7()">Supprimer des éléments du tableau</button>
+    <br><br>
+    <script>
+        let tableau = ["Ahmed","Anas","Achraf"];
+        let result = [];
+        tableau.splice(3,0,"Sara");
+        result = tableau.slice();
+        document.write(result); 
+    </script><br>
+    <script>
+        let tableau1 = ["Ahmed","Anas","Achraf","Sara"];
+        let result1 = [];
+        tableau1.splice(0,0,"Sanaa");
+        result1 = tableau1.slice();
+        document.write(result1);
+    </script><br>
+    <script>
+        let tableau2 = ["Sanaa","Ahmed","Anas","Achraf","Sara"];
+        let result2 = [];
+        tableau2.splice(3,0,"Omar");
+        result2 = tableau2.slice();
+        document.write(result2);
+    </script><br>
+    <script>
+        let tableau3 = ["Sanaa","Ahmed","Anas","Omar","Achraf","Sara"];
+        let result3 = [];
+        tableau3.splice(2,1);
+        result3 = tableau3.slice();
+        document.write(result3);
+    </script><br>
+    <script>
+        let tableau4 = ["Sanaa","Ahmed","Omar","Achraf","Sara"];
+        let result4 = [];
+        tableau4.splice(2,0,"Saad");
+        tableau4.splice(4,1);
+        result4 = tableau4.slice();
+        document.write(result4);
+    </script><br>
+    <script>
+        let tableau5 = ["Sanaa","Ahmed","Saad","Omar","Sara"];
+        let nvTab = ["Aya","Maha"];
+        let result5 = [];
+        result5 = tableau5.concat(nvTab);
+        document.write(result5);
+    </script><br>
+    <script>
+        let tableau6 = ["Sanaa","Ahmed","Saad","Omar","Sara","Aya","Maha"];
+        let result6 = [];
+        tableau6.splice(0,1);
+        tableau6.splice(5,1);
+        tableau6.splice(2,1);
+        result6 = tableau6.slice();
+        document.write(result6);
+    </script>
+</body>
+</html>
+</DOCTYPE>

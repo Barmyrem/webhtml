@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+</head>
+<body>
+ <h1> Calculatrice</h1>
+    <form>
+        <table>
+            <tr>
+                <td><label>Entrer le 1er nombre</label></td>
+                <td><input type="text" id="nb1"></td>
+            </tr>
+            <tr>
+                <td><label>Entrer le 2ème nombre</label></td>
+                <td><input type="text" id="nb2"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" class="op" value="+" onclick="var x = parseFloat(document.getElementById('nb1').value);
+                                                                       var y = parseFloat(document.getElementById('nb2').value); 
+                                                                       var res = x + y;
+                                                                       document.write(res);"></td>
+                <td><input type="submit" class="op" value="*" onclick="var x = parseFloat(document.getElementById('nb1').value);
+                                                                       var y = parseFloat(document.getElementById('nb2').value); 
+                                                                       var res = x *y;
+                                                                       document.write(res);"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" class="op" value="%" onclick="var x = parseFloat(document.getElementById('nb1').value);
+                                                                       var y = parseFloat(document.getElementById('nb2').value); 
+                                                                       var res = x % y;
+                                                                       document.write(res);"></td>
+                <td><input type="submit" class="op" value=">"onclick="var x = parseFloat(document.getElementById('nb1').value);
+                                                                      var y = parseFloat(document.getElementById('nb2').value); 
+                                                                      var res = x > y;
+                                                                      document.write(res);"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" class="op" value="**" onclick="var x = parseFloat(document.getElementById('nb1').value);
+                                                                        var y = parseFloat(document.getElementById('nb2').value); 
+                                                                        var res = Math.pow(x,y);
+                                                                        document.write(res);"></td>
+                <td><input type="submit" class="op" value="/"onclick="var x = parseFloat(document.getElementById('nb1').value);
+                                                                      var y = parseFloat(document.getElementById('nb2').value); 
+                                                                      var res = x / y;
+                                                                      document.write(res);"></td>
+            </tr>
+         
+            <td><input type="submit" value="cancel"></td>
+          
+        </table>
+    </form>
+
+    
+        
+    </script>
+</body>
+</html>

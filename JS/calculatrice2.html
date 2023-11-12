@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+</head>
+<body>
+    <h1 style="text-align: center; text-decoration: underline;">Calculatrice</h1>
+
+    
+        <label>Entrer le 1er nombre</label>
+        <input type="text" id="nb1">
+        <br><br>
+        <label>Entrer le 2ème nombre</label>
+        <input type="text" id="nb2">
+        <br><br>
+        <label for="select-button">Select an option: </label>
+        <select id="select-button">
+            <option value="add"> Addition</option>
+            <option value="mult">Multiplication</option>
+            <option value="modulo"> Modulo </option>
+            <option value="expo">Expo</option>
+            <option value="com">Comparaison</option>
+        </select>
+        <input type="button" value="Calculer" onclick="calculate()">
+        <input type="button" value="Cancel">   
+    
+    <div id="result"></div>
+
+    <script>
+        function calculate() {
+            var nb1 = parseFloat(document.getElementById('nb1').value);
+            var nb2 = parseFloat(document.getElementById('nb2').value);
+            let selectedOption = document.getElementById('select-button').value;
+            let result;
+    
+            switch (selectedOption) {
+                case "add":
+                    result = nb1 + nb2;
+                    break;
+                case "mult":
+                    result = nb1 * nb2;
+                    break;
+                case "modulo":
+                    result = nb1 % nb2;
+                    break;
+                case "expo":
+                    result = Math.pow(nb1, nb2);
+                    break;
+                case "com":
+                    result = nb1 === nb2;
+
+                    break;
+                default:
+                    result = "option invalide";
+            }
+
+           
+            document.getElementById('result').textContent = `Result: ${result}`;
+        }
+    </script>
+</body>
+</html>

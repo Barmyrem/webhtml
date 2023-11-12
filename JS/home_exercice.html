@@ -1,0 +1,87 @@
+<!-- // 1. Ajouter safaa à la fin et afficher :
+const tableau = ["ahmed", "anas", "achraf"];
+tableau.push("safaa");
+console.log(tableau);
+
+// 2. Ajouter sanaa au début et afficher :
+tableau.unshift("sanaa");
+console.log(tableau);
+
+// 3. Ajouter omar entre anas et achraf et afficher :
+const indexAnas = tableau.indexOf("anas");
+const indexAchraf = tableau.indexOf("achraf");
+tableau.splice(indexAnas + 1, 0, "omar");
+console.log(tableau);
+
+// 4. Supprimer anas et afficher :
+tableau.splice(indexAnas, 1);
+console.log(tableau);
+
+// 5. Ajouter saad après ahmed et supprimer achraf en même temps :
+const indexAhmed = tableau.indexOf("ahmed");
+tableau.splice(indexAhmed + 1, 0, "saad");
+const indexAchrafNew = tableau.indexOf("achraf");
+tableau.splice(indexAchrafNew, 1);
+console.log(tableau); -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manipulation de Tableau</title>
+</head>
+<body>
+    <h1>Manipulation de Tableau</h1>
+    <ul id="tableau">
+        <li>ahmed</li>
+        <li>anas</li>
+        <li>achraf</li>
+    </ul>
+    <button onclick="ajouterSafaa()">Ajouter Safaa à la fin</button>
+    <button onclick="ajouterSanaa()">Ajouter Sanaa au début</button>
+    <button onclick="ajouterOmar()">Ajouter Omar entre Anas et Achraf</button>
+    <button onclick="supprimerAnas()">Supprimer Anas</button>
+    <button onclick="ajouterSaadEtSupprimerAchraf()">Ajouter Saad après Ahmed et supprimer Achraf</button>
+
+    <script>
+        function ajouterSafaa() {
+            const tableau = document.getElementById("tableau");
+            const safaa = document.createElement("li");
+            safaa.textContent = "safaa";
+            tableau.appendChild(safaa);
+        }
+
+        function ajouterSanaa() {
+            const tableau = document.getElementById("tableau");
+            const sanaa = document.createElement("li");
+            sanaa.textContent = "sanaa";
+            tableau.insertBefore(sanaa, tableau.firstChild);
+        }
+
+        function ajouterOmar() {
+            const tableau = document.getElementById("tableau");
+            const anas = tableau.children[1];
+            const omar = document.createElement("li");
+            omar.textContent = "omar";
+            tableau.insertBefore(omar, anas.nextElementSibling);
+        }
+
+        function supprimerAnas() {
+            const tableau = document.getElementById("tableau");
+            const anas = tableau.children[1];
+            tableau.removeChild(anas);
+        }
+
+        function ajouterSaadEtSupprimerAchraf() {
+            const tableau = document.getElementById("tableau");
+            const ahmed = tableau.children[0];
+            const achraf = tableau.children[2];
+            const saad = document.createElement("li");
+            saad.textContent = "saad";
+            tableau.insertBefore(saad, achraf);
+            tableau.removeChild(achraf);
+        }
+    </script>
+</body>
+</html>
+
